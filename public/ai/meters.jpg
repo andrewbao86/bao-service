@@ -1,0 +1,14 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <rect x="50" y="50" width="300" height="200" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+  <rect x="80" y="80" width="80" height="60" fill="#d1d5db" stroke="#374151" stroke-width="1"/>
+  <rect x="170" y="80" width="80" height="60" fill="#d1d5db" stroke="#374151" stroke-width="1"/>
+  <rect x="260" y="80" width="80" height="60" fill="#d1d5db" stroke="#374151" stroke-width="1"/>
+  <circle cx="120" cy="110" r="20" fill="#f9fafb" stroke="#374151" stroke-width="2"/>
+  <circle cx="210" cy="110" r="20" fill="#f9fafb" stroke="#374151" stroke-width="2"/>
+  <circle cx="300" cy="110" r="20" fill="#f9fafb" stroke="#374151" stroke-width="2"/>
+  <text x="120" y="115" text-anchor="middle" fill="#374151" font-family="Arial" font-size="12">kW</text>
+  <text x="210" y="115" text-anchor="middle" fill="#374151" font-family="Arial" font-size="12">kVA</text>
+  <text x="300" y="115" text-anchor="middle" fill="#374151" font-family="Arial" font-size="12">PF</text>
+  <text x="200" y="280" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="14">Power Meters</text>
+</svg>

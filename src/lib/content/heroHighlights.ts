@@ -1,0 +1,16 @@
+export const heroHighlights = [
+  "22kV GIS Switchgear",
+  "6.6kV AIS Switchgear",
+  "Oil-Immersed Transformers",
+  "Dry Transformers",
+  "Low Voltage Switchgear",
+  "Motor Control Centers",
+  "Star-Delta Starters",
+  "Variable Frequency Drives",
+  "Control Panels",
+  "PLCs",
+  "Power Meters",
+  "Earth Leakage Relays",
+  "Spare Parts",
+  "Consumables",
+];

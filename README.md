@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bao Service Website
 
-## Getting Started
+Next.js marketing site for [baoservice.net](https://baoservice.net), deployed on **Firebase App Hosting**.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router)
+- TypeScript, Tailwind CSS v4
+- next-intl (en, zh, ms)
+- framer-motion, lucide-react
+- Firebase Analytics (optional, via env)
+
+## Local development
 
 ```bash
+npm install
+cp .env.example .env.local
+# Add Firebase keys to .env.local if testing analytics locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/en](http://localhost:3000/en).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (e.g. `https://baoservice.net`) |
+| `LEADS_WEBHOOK_URL` | Optional webhook for contact form submissions |
+| `NEXT_PUBLIC_FIREBASE_*` | Firebase web app config (public; see `.env.example`) |
 
-## Learn More
+Production values for App Hosting are defined in `apphosting.yaml`. Override secrets in the [Firebase console](https://console.firebase.google.com/project/bao-service/apphosting).
 
-To learn more about Next.js, take a look at the following resources:
+## Firebase App Hosting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Repository: [github.com/andrewbao86/bao-service](https://github.com/andrewbao86/bao-service)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. In Firebase console → **App Hosting** → create backend `bao-service-web` (or link existing).
+2. Connect the GitHub repo `andrewbao86/bao-service` (branch `main` or `master`).
+3. Root directory: `/` — build command: `npm run build` (auto-detected for Next.js).
+4. Set `LEADS_WEBHOOK_URL` in App Hosting environment if using the contact form webhook.
 
-## Deploy on Vercel
+CLI deploy (optional):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install -g firebase-tools
+firebase login
+firebase deploy --only apphosting
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Routes
+
+- `/` → redirects to `/en`
+- `/{locale}` — home
+- `/{locale}/energy-efficient` — energy monitoring demo
+- `/{locale}/project-management` — PM services
+- `/{locale}/privacy`, `/{locale}/terms`
+
+Locales: `en`, `zh`, `ms`
+
+## Scripts
+
+```bash
+npm run dev      # local dev server
+npm run build    # production build
+npm run lint     # ESLint
+npm run check    # lint + build
+```

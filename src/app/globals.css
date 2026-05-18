@@ -2,25 +2,70 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  --brand-50: #eff6ff;
+  --brand-100: #dbeafe;
+  --brand-500: #2563eb;
+  --brand-600: #1d4ed8;
+  --brand-700: #1e40af;
+  --whatsapp: #16a34a;
+  --whatsapp-hover: #15803d;
+  --whatsapp-soft: #f0fdf4;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --section-alt: #f8fafc;
+  --surface-dark: #1e293b;
+  --surface-darker: #0f172a;
+  --accent-highlight: #bfdbfe;
+  --border-subtle: rgba(226, 232, 240, 0.85);
+  --success: #166534;
+  --success-soft: rgba(22, 101, 52, 0.15);
+  --warning: #b45309;
+  --warning-soft: rgba(180, 83, 9, 0.15);
+  --danger: #b91c1c;
+  --danger-soft: rgba(185, 28, 28, 0.15);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-hover: var(--whatsapp-hover);
+  --color-whatsapp-soft: var(--whatsapp-soft);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-section-alt: var(--section-alt);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-darker: var(--surface-darker);
+  --color-accent-highlight: var(--accent-highlight);
+  --color-border: #e2e8f0;
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+::before,
+::after {
+  border-color: var(--border-subtle);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }

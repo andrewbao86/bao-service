@@ -1,0 +1,23 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#1e293b"/>
+  <rect x="200" y="200" width="400" height="300" fill="#475569" stroke="#64748b" stroke-width="2"/>
+  <rect x="220" y="220" width="360" height="40" fill="#64748b"/>
+  <rect x="220" y="280" width="160" height="80" fill="#64748b"/>
+  <rect x="400" y="280" width="180" height="80" fill="#64748b"/>
+  <rect x="220" y="380" width="360" height="100" fill="#64748b"/>
+  
+  <rect x="800" y="200" width="300" height="200" fill="#475569" stroke="#64748b" stroke-width="2"/>
+  <rect x="820" y="220" width="260" height="30" fill="#64748b"/>
+  <rect x="820" y="260" width="120" height="60" fill="#64748b"/>
+  <rect x="960" y="260" width="120" height="60" fill="#64748b"/>
+  <rect x="820" y="330" width="260" height="50" fill="#64748b"/>
+  
+  <rect x="1200" y="200" width="250" height="180" fill="#475569" stroke="#64748b" stroke-width="2"/>
+  <rect x="1220" y="220" width="210" height="25" fill="#64748b"/>
+  <rect x="1220" y="255" width="210" height="25" fill="#64748b"/>
+  <rect x="1220" y="290" width="210" height="25" fill="#64748b"/>
+  <rect x="1220" y="325" width="210" height="25" fill="#64748b"/>
+  
+  <text x="960" y="600" text-anchor="middle" fill="#f1f5f9" font-family="Arial" font-size="48" font-weight="bold">Industrial Electrical Equipment</text>
+  <text x="960" y="660" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="32">Switchgear • MCCs • Cables • Meters • Spare Parts</text>
+</svg>
