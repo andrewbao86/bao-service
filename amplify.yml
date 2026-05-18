@@ -3,10 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - node --version
+        - npm --version
+        # npm install (not npm ci) — lockfile optional platform deps differ on Linux vs Windows
+        - npm install --include=optional --no-audit --no-fund
     build:
       commands:
-        # Webpack build avoids Turbopack symlink issues on Amplify (Next.js 16)
         - npm run build:amplify
   artifacts:
     baseDirectory: .next
