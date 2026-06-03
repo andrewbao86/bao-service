@@ -4,6 +4,34 @@ import { parseLeadPayload } from "@/lib/leads";
 export const runtime = "nodejs";
 
 const MAX_BODY_BYTES = 16_384;
+const WEBHOOK_TIMEOUT_MS = 10_000;
+
+async function forwardToWebhook(webhook: string, payload: object): Promise<Response> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), WEBHOOK_TIMEOUT_MS);
+  const body = JSON.stringify(payload);
+
+  try {
+    const res = await fetch(webhook, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Content-Length": String(Buffer.byteLength(body)),
+      },
+      body,
+      signal: controller.signal,
+      redirect: "follow",
+    });
+
+    if (!res.ok && process.env.NODE_ENV === "development") {
+      console.warn("[leads] webhook non-OK", res.status, await res.text().catch(() => ""));
+    }
+
+    return res;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
 
 export async function POST(request: Request) {
   const contentLength = Number(request.headers.get("content-length") ?? 0);
@@ -30,21 +58,16 @@ export async function POST(request: Request) {
   const webhook = process.env.LEADS_WEBHOOK_URL;
   try {
     if (webhook) {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10_000);
-      const res = await fetch(webhook, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        signal: controller.signal,
-      });
-      clearTimeout(timeout);
+      const res = await forwardToWebhook(webhook, payload);
       if (!res.ok) throw new Error("webhook failed");
     } else if (process.env.NODE_ENV === "development") {
       console.info("[leads]", JSON.stringify(payload));
     }
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (err) {
+    if (process.env.NODE_ENV === "development") {
+      console.error("[leads] webhook error", err);
+    }
     return NextResponse.json({ error: "Failed to submit" }, { status: 502 });
   }
 }
