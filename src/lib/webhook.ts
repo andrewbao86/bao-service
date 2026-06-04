@@ -74,7 +74,6 @@ export async function submitViaWebhook(
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Content-Length": String(Buffer.byteLength(body)),
       },
       body,
       signal: controller.signal,
