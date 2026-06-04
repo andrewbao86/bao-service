@@ -32,7 +32,7 @@ export function HiringHero({ onStudyClick, onPitchClick, updates }: HiringHeroPr
           <h1 className="mt-6 max-w-4xl">
             {lines.map((line, i) => (
               <motion.span
-                key={line}
+                key={`hero-line-${i}`}
                 initial={reduced ? false : { opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.12, duration: 0.5 }}

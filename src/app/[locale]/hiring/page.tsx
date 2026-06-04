@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HiringPage } from "@/components/hiring/HiringPage";
 import { fetchHiringUpdates } from "@/lib/hiring/updates";
 import { SITE_URL } from "@/lib/constants";
-import { type Locale } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -15,6 +15,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("metaDescription"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/hiring`,
+      languages: Object.fromEntries(
+        routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}/hiring`])
+      ),
     },
   };
 }

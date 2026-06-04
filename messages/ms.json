@@ -194,165 +194,165 @@
     "lastUpdated": "Last updated: August 2025"
   },
   "hiring": {
-    "metaTitle": "Join Bao Service | Pitch Your Value",
-    "metaDescription": "Study our industrial electrical, energy cost reduction, and project management solutions — then pitch where you can create measurable value for Bao Service.",
-    "heroEyebrow": "Hiring · Mission Briefing",
-    "heroLine1": "Don't Apply Blind.",
-    "heroLine2": "Study the Mission.",
-    "heroLine3": "Pitch Your Value.",
-    "heroSub": "Bao Service works across industrial electrical solutions, energy cost reduction, and project management support. We are looking for people who can create value in sales, engineering, data, software, operations, content, or partnerships.",
-    "heroStudyCta": "Study Our Solutions",
-    "heroPitchCta": "Pitch Yourself",
+    "metaTitle": "Sertai Bao Service | Bentangkan Nilai Anda",
+    "metaDescription": "Kaji penyelesaian elektrikal industri, pengurangan kos tenaga dan pengurusan projek kami, kemudian bentangkan bagaimana anda boleh mencipta nilai terukur untuk Bao Service.",
+    "heroEyebrow": "Pengambilan ? Taklimat Misi",
+    "heroLine1": "Jangan Mohon Secara Buta.",
+    "heroLine2": "Fahami Misi Dahulu.",
+    "heroLine3": "Bentangkan Nilai Anda.",
+    "heroSub": "Bao Service bekerja dalam penyelesaian elektrikal industri, pengurangan kos tenaga dan sokongan pengurusan projek. Kami mencari individu yang boleh mencipta nilai dalam jualan, kejuruteraan, data, perisian, operasi, kandungan atau perkongsian.",
+    "heroStudyCta": "Kaji Penyelesaian Kami",
+    "heroPitchCta": "Bentangkan Diri Anda",
     "updates": {
-      "label": "Mission updates",
-      "empty": "No active updates right now — check back soon.",
-      "range": "{start}–{end} of {total}",
-      "expandHint": "Tap to read full update",
-      "position": "Update {current} of {total}"
+      "label": "Kemas kini misi",
+      "empty": "Tiada kemas kini aktif sekarang. Sila semak semula nanti.",
+      "range": "{start}-{end} daripada {total}",
+      "expandHint": "Ketik untuk baca kemas kini penuh",
+      "position": "Kemas kini {current} daripada {total}"
     },
-    "buildingQuote": "We are not looking for generic applicants.",
-    "buildingBody": "We are looking for people who understand what Bao Service is building and can clearly explain how they can help us grow, improve, sell, build, analyze, or execute better.",
-    "pillElectrical": "Industrial Electrical",
-    "pillEnergy": "Energy Intelligence",
-    "pillPm": "Project Control",
-    "studyLabel": "Study the Mission",
-    "studyTitle": "Study What We Do. Then Pitch Where You Can Help.",
-    "studySub": "Before you submit, explore our current business directions. We want people who can connect their skills to real customer problems, not just send a generic CV.",
-    "studyLeadBefore": "Generic applications are easy to ignore. Specific value is hard to ignore. Study our current solutions first. Then tell us where you can help Bao Service grow, improve, sell, build, analyze, or execute better.",
-    "studyLeadAfter": "After reviewing these pages, your pitch should answer one simple question: Where can you create measurable value for Bao Service?",
-    "formSectionTitle": "Pitch Yourself",
-    "formSectionSub": "Tell us where you can help — with proof, not generic claims.",
-    "finalCtaTitle": "Understand the mission. Pitch your value.",
-    "finalCtaSub": "We review every pitch carefully. Strong submissions connect directly to a real Bao Service business direction.",
+    "buildingQuote": "Kami tidak mencari pemohon generik.",
+    "buildingBody": "Kami mencari individu yang memahami apa yang Bao Service sedang bina dan boleh menerangkan dengan jelas bagaimana mereka boleh membantu kami berkembang, menambah baik, menjual, membina, menganalisis atau melaksanakan dengan lebih baik.",
+    "pillElectrical": "Elektrikal Industri",
+    "pillEnergy": "Kecerdasan Tenaga",
+    "pillPm": "Kawalan Projek",
+    "studyLabel": "Kaji Misi",
+    "studyTitle": "Kaji Apa Yang Kami Buat. Kemudian Bentangkan Di Mana Anda Boleh Membantu.",
+    "studySub": "Sebelum menghantar, teroka arah perniagaan kami sekarang. Kami mahukan individu yang boleh menghubungkan kemahiran mereka kepada masalah pelanggan sebenar, bukan sekadar menghantar CV generik.",
+    "studyLeadBefore": "Permohonan generik mudah diabaikan. Nilai yang spesifik sukar diabaikan. Kaji dahulu penyelesaian semasa kami. Kemudian beritahu kami di mana anda boleh membantu Bao Service berkembang, menambah baik, menjual, membina, menganalisis atau melaksanakan dengan lebih baik.",
+    "studyLeadAfter": "Selepas menyemak halaman ini, pitch anda perlu menjawab satu soalan mudah: Di mana anda boleh mencipta nilai terukur untuk Bao Service?",
+    "formSectionTitle": "Bentangkan Diri Anda",
+    "formSectionSub": "Beritahu kami di mana anda boleh membantu, dengan bukti dan bukan dakwaan umum.",
+    "finalCtaTitle": "Fahami misi. Bentangkan nilai anda.",
+    "finalCtaSub": "Kami menyemak setiap pitch dengan teliti. Hantaran yang kuat berkait terus dengan arah perniagaan sebenar Bao Service.",
     "studyCards": {
       "electrical": {
-        "index": "01 / Industrial Electrical",
-        "title": "Industrial Electrical Solutions",
-        "description": "We supply and support electrical equipment and components for industrial plants across Singapore, Malaysia, and Indonesia — including switchgear, transformers, MCCs, VFDs, power meters, protection relays, and related systems.",
-        "prompt": "Can you help us source better, sell better, support customers better, or strengthen technical delivery?",
-        "talent": "Sales · Electrical Engineering · Procurement · Supplier Network · Site Support",
-        "cta": "Study Electrical Solutions"
+        "index": "01 / Elektrikal Industri",
+        "title": "Penyelesaian Elektrikal Industri",
+        "description": "Kami membekal dan menyokong peralatan serta komponen elektrikal untuk kilang industri di Singapura, Malaysia dan Indonesia, termasuk switchgear, transformer, MCC, VFD, meter kuasa, relay perlindungan dan sistem berkaitan.",
+        "prompt": "Bolehkah anda membantu kami mendapatkan sumber lebih baik, menjual lebih baik, menyokong pelanggan lebih baik atau mengukuhkan penghantaran teknikal?",
+        "talent": "Jualan ? Kejuruteraan Elektrikal ? Perolehan ? Rangkaian Pembekal ? Sokongan Tapak",
+        "cta": "Kaji Penyelesaian Elektrikal"
       },
       "energy": {
-        "index": "02 / Energy Intelligence",
-        "title": "Energy Cost Reduction & Data Analysis",
-        "description": "This service focuses on reducing energy cost using actual TNB bills, meter data, load profiles, demand analysis, and cost-reduction measures for Malaysian industrial and commercial facilities.",
-        "prompt": "Can you help us find customers, analyze data, build tools, explain savings, or implement practical energy-saving measures?",
-        "talent": "Energy Sales · Data Analysis · Software · Electrical Monitoring · BESS · Customer Success",
-        "cta": "Study Energy Solutions"
+        "index": "02 / Kecerdasan Tenaga",
+        "title": "Pengurangan Kos Tenaga & Analisis Data",
+        "description": "Perkhidmatan ini menumpukan kepada pengurangan kos tenaga menggunakan bil TNB sebenar, data meter, profil beban, analisis permintaan dan langkah pengurangan kos untuk kemudahan industri dan komersial di Malaysia.",
+        "prompt": "Bolehkah anda membantu kami mencari pelanggan, menganalisis data, membina alat, menerangkan penjimatan atau melaksanakan langkah penjimatan tenaga yang praktikal?",
+        "talent": "Jualan Tenaga ? Analisis Data ? Perisian ? Pemantauan Elektrikal ? BESS ? Kejayaan Pelanggan",
+        "cta": "Kaji Penyelesaian Tenaga"
       },
       "pm": {
-        "index": "03 / Project Control",
-        "title": "Project Management Support",
-        "description": "Bao Service provides project support when teams are overloaded, key people are unavailable, responsibilities are unclear, or coordination becomes tense.",
-        "prompt": "Can you help us manage site coordination, documentation, stakeholder follow-up, project recovery, or customer communication?",
-        "talent": "Project Management · Operations · Documentation · Site Coordination · Client Communication",
-        "cta": "Study Project Support"
+        "index": "03 / Kawalan Projek",
+        "title": "Sokongan Pengurusan Projek",
+        "description": "Bao Service menyediakan sokongan projek apabila pasukan terlalu sibuk, orang penting tidak tersedia, tanggungjawab tidak jelas atau koordinasi menjadi tegang.",
+        "prompt": "Bolehkah anda membantu kami mengurus koordinasi tapak, dokumentasi, susulan pihak berkepentingan, pemulihan projek atau komunikasi pelanggan?",
+        "talent": "Pengurusan Projek ? Operasi ? Dokumentasi ? Koordinasi Tapak ? Komunikasi Pelanggan",
+        "cta": "Kaji Sokongan Projek"
       }
     },
     "chips": {
-      "label": "Before you pitch:",
-      "electrical": "Read Electrical Solutions",
-      "energy": "Read Energy Cost Reduction",
-      "pm": "Read Project Management",
-      "ready": "Ready to Pitch"
+      "label": "Sebelum anda pitch:",
+      "electrical": "Baca Penyelesaian Elektrikal",
+      "energy": "Baca Pengurangan Kos Tenaga",
+      "pm": "Baca Pengurusan Projek",
+      "ready": "Sedia untuk Pitch"
     },
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone (optional)",
-      "studiedMostLabel": "Which Bao Service solution did you study most closely?",
+      "name": "Nama",
+      "email": "E-mel",
+      "phone": "Telefon (pilihan)",
+      "studiedMostLabel": "Penyelesaian Bao Service manakah yang anda kaji paling dekat?",
       "studiedMost": {
-        "electrical": "Industrial Electrical Solutions",
-        "energy": "Energy Cost Reduction",
-        "project-management": "Project Management Support",
-        "multiple": "More than one",
-        "not-studied": "I have not studied yet"
+        "electrical": "Penyelesaian Elektrikal Industri",
+        "energy": "Pengurangan Kos Tenaga",
+        "project-management": "Sokongan Pengurusan Projek",
+        "multiple": "Lebih daripada satu",
+        "not-studied": "Saya belum mengkaji lagi"
       },
-      "notStudiedWarning": "Stronger pitches usually connect directly to one of our current business directions.",
-      "directionLabel": "Which Bao Service direction are you most interested in?",
+      "notStudiedWarning": "Pitch yang lebih kuat biasanya berkait terus dengan salah satu arah perniagaan semasa kami.",
+      "directionLabel": "Arah Bao Service manakah yang paling menarik minat anda?",
       "direction": {
-        "electrical": "Industrial Electrical Solutions",
-        "energy": "Energy Cost Reduction & Data Analysis",
-        "project-management": "Project Management Support",
-        "multiple": "Multiple areas",
-        "other": "Something else"
+        "electrical": "Penyelesaian Elektrikal Industri",
+        "energy": "Pengurangan Kos Tenaga & Analisis Data",
+        "project-management": "Sokongan Pengurusan Projek",
+        "multiple": "Beberapa bidang",
+        "other": "Sesuatu yang lain"
       },
-      "contributionLabel": "After studying our solution pages, where do you think you can help?",
-      "contributionPlaceholder": "Example: I can help Bao Service generate leads for energy cost reduction among medium-voltage industrial customers in Johor because I already have contacts with facility managers and contractors.",
-      "valuePitchLabel": "What can you bring?",
-      "proofLabel": "What proof, experience, network, or past result supports your pitch?",
-      "first30DaysLabel": "If we worked together for 30 days, what would you try to improve, sell, build, or fix first?",
-      "first30DaysPlaceholder": "Be specific — a concrete first move, not a generic statement.",
-      "engagementLabel": "Preferred collaboration type",
+      "contributionLabel": "Selepas mengkaji halaman penyelesaian kami, di mana anda rasa anda boleh membantu?",
+      "contributionPlaceholder": "Contoh: Saya boleh membantu Bao Service menjana lead untuk pengurangan kos tenaga dalam kalangan pelanggan industri voltan sederhana di Johor kerana saya sudah mempunyai hubungan dengan pengurus fasiliti dan kontraktor.",
+      "valuePitchLabel": "Apa nilai yang boleh anda bawa?",
+      "proofLabel": "Apakah bukti, pengalaman, rangkaian atau hasil lepas yang menyokong pitch anda?",
+      "first30DaysLabel": "Jika kita bekerja bersama selama 30 hari, apa yang akan anda cuba tambah baik, jual, bina atau selesaikan dahulu?",
+      "first30DaysPlaceholder": "Nyatakan secara spesifik, satu langkah pertama yang konkrit dan bukan kenyataan generik.",
+      "engagementLabel": "Jenis kerjasama pilihan",
       "engagement": {
-        "full-time": "Full-time",
-        "part-time": "Part-time",
+        "full-time": "Sepenuh masa",
+        "part-time": "Separuh masa",
         "freelance": "Freelance",
-        "commission": "Commission-based",
-        "internship": "Internship",
-        "partnership": "Partnership",
-        "open": "Open to discussion"
+        "commission": "Berasaskan komisen",
+        "internship": "Latihan industri",
+        "partnership": "Perkongsian",
+        "open": "Terbuka untuk dibincang"
       },
-      "cvLinkLabel": "CV link (required)",
-      "cvLinkWarning1": "Before submitting, please make sure your CV link is accessible.",
-      "cvLinkWarning2": "Google Drive links should be set to \"Anyone with the link can view\".",
-      "portfolioLinkLabel": "Portfolio link (optional)",
-      "cvAccessConfirm": "I confirm Bao Service can access the CV/portfolio link I provided.",
-      "privacyConsent": "I agree that Bao Service may review and store my submitted information for hiring, collaboration, and follow-up purposes.",
-      "privacyLink": "Privacy Policy",
-      "privacyNote": "We will only use your submission to assess possible hiring, freelance, partnership, or collaboration opportunities with Bao Service.",
-      "submit": "Submit Pitch",
-      "submitting": "Submitting…",
-      "successTitle": "Pitch received",
-      "success": "Thank you — we will review your submission and follow up if there is a potential fit.",
-      "error": "Something went wrong. Please try again or contact us on WhatsApp."
+      "cvLinkLabel": "Pautan CV (wajib)",
+      "cvLinkWarning1": "Sebelum menghantar, pastikan pautan CV anda boleh diakses.",
+      "cvLinkWarning2": "Pautan Google Drive perlu ditetapkan kepada \"Anyone with the link can view\".",
+      "portfolioLinkLabel": "Pautan portfolio (pilihan)",
+      "cvAccessConfirm": "Saya mengesahkan Bao Service boleh mengakses pautan CV/portfolio yang saya berikan.",
+      "privacyConsent": "Saya bersetuju bahawa Bao Service boleh menyemak dan menyimpan maklumat yang saya hantar untuk tujuan pengambilan, kerjasama dan susulan.",
+      "privacyLink": "Dasar Privasi",
+      "privacyNote": "Kami hanya akan menggunakan hantaran anda untuk menilai peluang pengambilan, freelance, perkongsian atau kerjasama dengan Bao Service.",
+      "submit": "Hantar Pitch",
+      "submitting": "Menghantar...",
+      "successTitle": "Pitch diterima",
+      "success": "Terima kasih. Kami akan menyemak hantaran anda dan menghubungi anda jika terdapat kesesuaian berpotensi.",
+      "error": "Sesuatu telah berlaku. Sila cuba lagi atau hubungi kami di WhatsApp."
     },
     "timeline": {
-      "title": "What Happens Next",
-      "sub": "We treat every pitch seriously — here is how the process works.",
+      "title": "Apa Berlaku Seterusnya",
+      "sub": "Kami mengambil setiap pitch dengan serius. Begini prosesnya.",
       "step1": {
-        "title": "You submit",
-        "body": "Share your pitch, links, and where you believe you can create value."
+        "title": "Anda hantar",
+        "body": "Kongsi pitch, pautan dan di mana anda percaya anda boleh mencipta nilai."
       },
       "step2": {
-        "title": "We review",
-        "body": "Our team reads every submission and checks fit against current business needs."
+        "title": "Kami semak",
+        "body": "Pasukan kami membaca setiap hantaran dan menilai kesesuaian dengan keperluan perniagaan semasa."
       },
       "step3": {
-        "title": "Conversation",
-        "body": "Promising pitches lead to a short call or message exchange."
+        "title": "Perbualan",
+        "body": "Pitch yang menjanjikan akan membawa kepada panggilan ringkas atau pertukaran mesej."
       },
       "step4": {
-        "title": "Next steps",
-        "body": "If there is mutual fit, we discuss collaboration — employment, freelance, or partnership."
+        "title": "Langkah seterusnya",
+        "body": "Jika ada kesesuaian bersama, kami bincang bentuk kerjasama seperti pekerjaan, freelance atau perkongsian."
       }
     },
     "faq": {
-      "title": "Hiring FAQ",
+      "title": "Soalan Lazim Pengambilan",
       "faq1": {
-        "q": "Is this a traditional job application?",
-        "a": "No. We want you to study our business directions first, then pitch specific value you can create — not send a generic CV blast."
+        "q": "Adakah ini permohonan kerja tradisional?",
+        "a": "Tidak. Kami mahu anda mengkaji arah perniagaan kami dahulu, kemudian pitch nilai spesifik yang boleh anda cipta, bukan menghantar CV generik."
       },
       "faq2": {
-        "q": "Do I need to tick all three solution chips?",
-        "a": "No — but you should understand at least one area well enough to explain where you can help."
+        "q": "Perlukah saya menanda ketiga-tiga cip penyelesaian?",
+        "a": "Tidak, tetapi anda perlu memahami sekurang-kurangnya satu bidang dengan cukup baik untuk menerangkan di mana anda boleh membantu."
       },
       "faq3": {
-        "q": "What collaboration types do you consider?",
-        "a": "Full-time, part-time, freelance, commission-based, internship, and partnership models — depending on the person and the opportunity."
+        "q": "Apakah jenis kerjasama yang dipertimbangkan?",
+        "a": "Sepenuh masa, separuh masa, freelance, berasaskan komisen, latihan industri dan model perkongsian, bergantung kepada individu dan peluang."
       },
       "faq4": {
-        "q": "Why do you require an accessible CV link?",
-        "a": "Link-based submissions fail when Google Drive or portfolio permissions are restricted. Please set sharing to \"Anyone with the link can view\"."
+        "q": "Mengapa pautan CV yang boleh diakses diperlukan?",
+        "a": "Hantaran berasaskan pautan gagal apabila kebenaran Google Drive atau portfolio disekat. Sila tetapkan perkongsian kepada \"Anyone with the link can view\"."
       },
       "faq5": {
-        "q": "How long until I hear back?",
-        "a": "We aim to review submissions within one to two weeks. Strong, specific pitches may hear back sooner."
+        "q": "Berapa lama sebelum saya mendapat maklum balas?",
+        "a": "Kami menyasarkan untuk menyemak hantaran dalam satu hingga dua minggu. Pitch yang kuat dan spesifik mungkin menerima maklum balas lebih awal."
       },
       "faq6": {
-        "q": "Can I apply from outside Singapore?",
-        "a": "Yes. Bao Service operates across Singapore, Malaysia, and Indonesia. Remote and regional collaboration may be possible depending on the role."
+        "q": "Bolehkah saya memohon dari luar Singapura?",
+        "a": "Ya. Bao Service beroperasi di Singapura, Malaysia dan Indonesia. Kerjasama jarak jauh dan serantau mungkin boleh dilakukan bergantung pada peranan."
       }
     }
   }

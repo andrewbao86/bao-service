@@ -194,165 +194,165 @@
     "lastUpdated": "Last updated: August 2025"
   },
   "hiring": {
-    "metaTitle": "Join Bao Service | Pitch Your Value",
-    "metaDescription": "Study our industrial electrical, energy cost reduction, and project management solutions — then pitch where you can create measurable value for Bao Service.",
-    "heroEyebrow": "Hiring · Mission Briefing",
-    "heroLine1": "Don't Apply Blind.",
-    "heroLine2": "Study the Mission.",
-    "heroLine3": "Pitch Your Value.",
-    "heroSub": "Bao Service works across industrial electrical solutions, energy cost reduction, and project management support. We are looking for people who can create value in sales, engineering, data, software, operations, content, or partnerships.",
-    "heroStudyCta": "Study Our Solutions",
-    "heroPitchCta": "Pitch Yourself",
+    "metaTitle": "加入 Bao Service | 展示你的价值",
+    "metaDescription": "了解我们的工业电气、能源降本和项目管理解决方案，然后说明你能如何为 Bao Service 创造可衡量的价值。",
+    "heroEyebrow": "招聘 · 任务简报",
+    "heroLine1": "不要盲目申请。",
+    "heroLine2": "先了解任务。",
+    "heroLine3": "再展示价值。",
+    "heroSub": "Bao Service 的业务涵盖工业电气解决方案、能源成本降低和项目管理支持。我们正在寻找能在销售、工程、数据、软件、运营、内容或合作伙伴关系中创造价值的人。",
+    "heroStudyCta": "了解我们的方案",
+    "heroPitchCta": "提交你的价值提案",
     "updates": {
-      "label": "Mission updates",
-      "empty": "No active updates right now — check back soon.",
-      "range": "{start}–{end} of {total}",
-      "expandHint": "Tap to read full update",
-      "position": "Update {current} of {total}"
+      "label": "任务更新",
+      "empty": "目前没有最新更新，请稍后再查看。",
+      "range": "{start}-{end} / {total}",
+      "expandHint": "点击阅读全文",
+      "position": "第 {current} / {total} 条更新"
     },
-    "buildingQuote": "We are not looking for generic applicants.",
-    "buildingBody": "We are looking for people who understand what Bao Service is building and can clearly explain how they can help us grow, improve, sell, build, analyze, or execute better.",
-    "pillElectrical": "Industrial Electrical",
-    "pillEnergy": "Energy Intelligence",
-    "pillPm": "Project Control",
-    "studyLabel": "Study the Mission",
-    "studyTitle": "Study What We Do. Then Pitch Where You Can Help.",
-    "studySub": "Before you submit, explore our current business directions. We want people who can connect their skills to real customer problems, not just send a generic CV.",
-    "studyLeadBefore": "Generic applications are easy to ignore. Specific value is hard to ignore. Study our current solutions first. Then tell us where you can help Bao Service grow, improve, sell, build, analyze, or execute better.",
-    "studyLeadAfter": "After reviewing these pages, your pitch should answer one simple question: Where can you create measurable value for Bao Service?",
-    "formSectionTitle": "Pitch Yourself",
-    "formSectionSub": "Tell us where you can help — with proof, not generic claims.",
-    "finalCtaTitle": "Understand the mission. Pitch your value.",
-    "finalCtaSub": "We review every pitch carefully. Strong submissions connect directly to a real Bao Service business direction.",
+    "buildingQuote": "我们寻找的不是普通申请者。",
+    "buildingBody": "我们寻找真正理解 Bao Service 正在建设什么，并能清楚说明自己如何帮助我们增长、改进、销售、构建、分析或更好执行的人。",
+    "pillElectrical": "工业电气",
+    "pillEnergy": "能源智能",
+    "pillPm": "项目管控",
+    "studyLabel": "了解任务",
+    "studyTitle": "先了解我们做什么，再说明你能在哪里帮上忙。",
+    "studySub": "提交之前，请先浏览我们目前的业务方向。我们希望看到的是能把自身能力连接到真实客户问题的人，而不是一份通用简历。",
+    "studyLeadBefore": "通用申请很容易被忽略；具体价值很难被忽略。请先了解我们当前的解决方案，再告诉我们你能如何帮助 Bao Service 增长、改进、销售、构建、分析或执行得更好。",
+    "studyLeadAfter": "看完这些页面后，你的提案应该回答一个简单问题：你能在哪里为 Bao Service 创造可衡量的价值？",
+    "formSectionTitle": "提交你的价值提案",
+    "formSectionSub": "告诉我们你能在哪里帮忙。请用证据，而不是泛泛而谈。",
+    "finalCtaTitle": "理解任务，展示价值。",
+    "finalCtaSub": "我们会认真查看每一份提案。优秀的提交会直接连接到 Bao Service 的真实业务方向。",
     "studyCards": {
       "electrical": {
-        "index": "01 / Industrial Electrical",
-        "title": "Industrial Electrical Solutions",
-        "description": "We supply and support electrical equipment and components for industrial plants across Singapore, Malaysia, and Indonesia — including switchgear, transformers, MCCs, VFDs, power meters, protection relays, and related systems.",
-        "prompt": "Can you help us source better, sell better, support customers better, or strengthen technical delivery?",
-        "talent": "Sales · Electrical Engineering · Procurement · Supplier Network · Site Support",
-        "cta": "Study Electrical Solutions"
+        "index": "01 / 工业电气",
+        "title": "工业电气解决方案",
+        "description": "我们为新加坡、马来西亚和印度尼西亚的工业工厂供应并支持电气设备与组件，包括开关设备、变压器、MCC、VFD、电力仪表、保护继电器及相关系统。",
+        "prompt": "你能帮助我们更好地采购、更好地销售、更好地支持客户，或加强技术交付吗？",
+        "talent": "销售 · 电气工程 · 采购 · 供应商网络 · 现场支持",
+        "cta": "了解电气解决方案"
       },
       "energy": {
-        "index": "02 / Energy Intelligence",
-        "title": "Energy Cost Reduction & Data Analysis",
-        "description": "This service focuses on reducing energy cost using actual TNB bills, meter data, load profiles, demand analysis, and cost-reduction measures for Malaysian industrial and commercial facilities.",
-        "prompt": "Can you help us find customers, analyze data, build tools, explain savings, or implement practical energy-saving measures?",
-        "talent": "Energy Sales · Data Analysis · Software · Electrical Monitoring · BESS · Customer Success",
-        "cta": "Study Energy Solutions"
+        "index": "02 / 能源智能",
+        "title": "能源降本与数据分析",
+        "description": "这项服务面向马来西亚工业和商业设施，使用真实 TNB 账单、电表数据、负载曲线、需量分析和降本措施来降低能源成本。",
+        "prompt": "你能帮助我们寻找客户、分析数据、构建工具、解释节省空间，或实施实际节能措施吗？",
+        "talent": "能源销售 · 数据分析 · 软件 · 电力监测 · BESS · 客户成功",
+        "cta": "了解能源解决方案"
       },
       "pm": {
-        "index": "03 / Project Control",
-        "title": "Project Management Support",
-        "description": "Bao Service provides project support when teams are overloaded, key people are unavailable, responsibilities are unclear, or coordination becomes tense.",
-        "prompt": "Can you help us manage site coordination, documentation, stakeholder follow-up, project recovery, or customer communication?",
-        "talent": "Project Management · Operations · Documentation · Site Coordination · Client Communication",
-        "cta": "Study Project Support"
+        "index": "03 / 项目管控",
+        "title": "项目管理支持",
+        "description": "当团队负荷过高、关键人员缺席、职责不清或协调紧张时，Bao Service 提供项目支持。",
+        "prompt": "你能帮助我们处理现场协调、文件跟进、利益相关方沟通、项目恢复或客户沟通吗？",
+        "talent": "项目管理 · 运营 · 文件管理 · 现场协调 · 客户沟通",
+        "cta": "了解项目支持"
       }
     },
     "chips": {
-      "label": "Before you pitch:",
-      "electrical": "Read Electrical Solutions",
-      "energy": "Read Energy Cost Reduction",
-      "pm": "Read Project Management",
-      "ready": "Ready to Pitch"
+      "label": "提交前请先：",
+      "electrical": "阅读电气解决方案",
+      "energy": "阅读能源降本方案",
+      "pm": "阅读项目管理",
+      "ready": "可以提交"
     },
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone (optional)",
-      "studiedMostLabel": "Which Bao Service solution did you study most closely?",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "phone": "电话（可选）",
+      "studiedMostLabel": "你最仔细了解了 Bao Service 的哪一项解决方案？",
       "studiedMost": {
-        "electrical": "Industrial Electrical Solutions",
-        "energy": "Energy Cost Reduction",
-        "project-management": "Project Management Support",
-        "multiple": "More than one",
-        "not-studied": "I have not studied yet"
+        "electrical": "工业电气解决方案",
+        "energy": "能源成本降低",
+        "project-management": "项目管理支持",
+        "multiple": "多个方向",
+        "not-studied": "我还没有了解"
       },
-      "notStudiedWarning": "Stronger pitches usually connect directly to one of our current business directions.",
-      "directionLabel": "Which Bao Service direction are you most interested in?",
+      "notStudiedWarning": "更有说服力的提案通常会直接连接到我们当前的业务方向。",
+      "directionLabel": "你最感兴趣的是 Bao Service 的哪个方向？",
       "direction": {
-        "electrical": "Industrial Electrical Solutions",
-        "energy": "Energy Cost Reduction & Data Analysis",
-        "project-management": "Project Management Support",
-        "multiple": "Multiple areas",
-        "other": "Something else"
+        "electrical": "工业电气解决方案",
+        "energy": "能源降本与数据分析",
+        "project-management": "项目管理支持",
+        "multiple": "多个方向",
+        "other": "其他方向"
       },
-      "contributionLabel": "After studying our solution pages, where do you think you can help?",
-      "contributionPlaceholder": "Example: I can help Bao Service generate leads for energy cost reduction among medium-voltage industrial customers in Johor because I already have contacts with facility managers and contractors.",
-      "valuePitchLabel": "What can you bring?",
-      "proofLabel": "What proof, experience, network, or past result supports your pitch?",
-      "first30DaysLabel": "If we worked together for 30 days, what would you try to improve, sell, build, or fix first?",
-      "first30DaysPlaceholder": "Be specific — a concrete first move, not a generic statement.",
-      "engagementLabel": "Preferred collaboration type",
+      "contributionLabel": "看过我们的方案页面后，你认为自己能在哪些地方帮上忙？",
+      "contributionPlaceholder": "示例：我可以帮助 Bao Service 在柔佛的中压工业客户中开发能源降本线索，因为我已经与设施经理和承包商有联系。",
+      "valuePitchLabel": "你能带来什么价值？",
+      "proofLabel": "有什么证据、经验、人脉或过往成果支持你的提案？",
+      "first30DaysLabel": "如果我们合作 30 天，你会先尝试改进、销售、构建或解决什么？",
+      "first30DaysPlaceholder": "请具体说明第一步行动，不要写泛泛的表述。",
+      "engagementLabel": "偏好的合作方式",
       "engagement": {
-        "full-time": "Full-time",
-        "part-time": "Part-time",
-        "freelance": "Freelance",
-        "commission": "Commission-based",
-        "internship": "Internship",
-        "partnership": "Partnership",
-        "open": "Open to discussion"
+        "full-time": "全职",
+        "part-time": "兼职",
+        "freelance": "自由职业",
+        "commission": "佣金制",
+        "internship": "实习",
+        "partnership": "合作伙伴",
+        "open": "可讨论"
       },
-      "cvLinkLabel": "CV link (required)",
-      "cvLinkWarning1": "Before submitting, please make sure your CV link is accessible.",
-      "cvLinkWarning2": "Google Drive links should be set to \"Anyone with the link can view\".",
-      "portfolioLinkLabel": "Portfolio link (optional)",
-      "cvAccessConfirm": "I confirm Bao Service can access the CV/portfolio link I provided.",
-      "privacyConsent": "I agree that Bao Service may review and store my submitted information for hiring, collaboration, and follow-up purposes.",
-      "privacyLink": "Privacy Policy",
-      "privacyNote": "We will only use your submission to assess possible hiring, freelance, partnership, or collaboration opportunities with Bao Service.",
-      "submit": "Submit Pitch",
-      "submitting": "Submitting…",
-      "successTitle": "Pitch received",
-      "success": "Thank you — we will review your submission and follow up if there is a potential fit.",
-      "error": "Something went wrong. Please try again or contact us on WhatsApp."
+      "cvLinkLabel": "简历链接（必填）",
+      "cvLinkWarning1": "提交前，请确认你的简历链接可以打开。",
+      "cvLinkWarning2": "Google Drive 链接应设置为“知道链接的任何人均可查看”。",
+      "portfolioLinkLabel": "作品集链接（可选）",
+      "cvAccessConfirm": "我确认 Bao Service 可以访问我提供的简历/作品集链接。",
+      "privacyConsent": "我同意 Bao Service 为招聘、合作和后续联系目的查看并保存我提交的信息。",
+      "privacyLink": "隐私政策",
+      "privacyNote": "我们只会使用你的提交内容来评估招聘、自由职业、合作伙伴或其他协作机会。",
+      "submit": "提交提案",
+      "submitting": "提交中...",
+      "successTitle": "已收到提案",
+      "success": "谢谢。我们会查看你的提交，如有合适机会会再联系你。",
+      "error": "发生错误。请重试，或通过 WhatsApp 联系我们。"
     },
     "timeline": {
-      "title": "What Happens Next",
-      "sub": "We treat every pitch seriously — here is how the process works.",
+      "title": "接下来会发生什么",
+      "sub": "我们认真对待每一份提案。流程如下。",
       "step1": {
-        "title": "You submit",
-        "body": "Share your pitch, links, and where you believe you can create value."
+        "title": "你提交",
+        "body": "分享你的提案、链接，以及你认为自己能创造价值的地方。"
       },
       "step2": {
-        "title": "We review",
-        "body": "Our team reads every submission and checks fit against current business needs."
+        "title": "我们审核",
+        "body": "我们的团队会阅读每份提交，并根据当前业务需求评估匹配度。"
       },
       "step3": {
-        "title": "Conversation",
-        "body": "Promising pitches lead to a short call or message exchange."
+        "title": "进一步沟通",
+        "body": "有潜力的提案会进入简短通话或消息交流。"
       },
       "step4": {
-        "title": "Next steps",
-        "body": "If there is mutual fit, we discuss collaboration — employment, freelance, or partnership."
+        "title": "下一步",
+        "body": "如果双方匹配，我们会讨论合作方式，包括雇佣、自由职业或伙伴合作。"
       }
     },
     "faq": {
-      "title": "Hiring FAQ",
+      "title": "招聘常见问题",
       "faq1": {
-        "q": "Is this a traditional job application?",
-        "a": "No. We want you to study our business directions first, then pitch specific value you can create — not send a generic CV blast."
+        "q": "这是传统的求职申请吗？",
+        "a": "不是。我们希望你先了解我们的业务方向，再提出你能创造的具体价值，而不是发送一份通用简历。"
       },
       "faq2": {
-        "q": "Do I need to tick all three solution chips?",
-        "a": "No — but you should understand at least one area well enough to explain where you can help."
+        "q": "我需要勾选全部三个方案标签吗？",
+        "a": "不需要，但你至少应该充分理解其中一个方向，并能说明你在哪里可以帮上忙。"
       },
       "faq3": {
-        "q": "What collaboration types do you consider?",
-        "a": "Full-time, part-time, freelance, commission-based, internship, and partnership models — depending on the person and the opportunity."
+        "q": "你们考虑哪些合作类型？",
+        "a": "我们会根据人选和机会考虑全职、兼职、自由职业、佣金制、实习和合作伙伴模式。"
       },
       "faq4": {
-        "q": "Why do you require an accessible CV link?",
-        "a": "Link-based submissions fail when Google Drive or portfolio permissions are restricted. Please set sharing to \"Anyone with the link can view\"."
+        "q": "为什么要求可访问的简历链接？",
+        "a": "如果 Google Drive 或作品集权限受限，链接式提交会失效。请设置为“知道链接的任何人均可查看”。"
       },
       "faq5": {
-        "q": "How long until I hear back?",
-        "a": "We aim to review submissions within one to two weeks. Strong, specific pitches may hear back sooner."
+        "q": "多久会收到回复？",
+        "a": "我们目标是在一到两周内审核提交。具体、有说服力的提案可能会更快收到回复。"
       },
       "faq6": {
-        "q": "Can I apply from outside Singapore?",
-        "a": "Yes. Bao Service operates across Singapore, Malaysia, and Indonesia. Remote and regional collaboration may be possible depending on the role."
+        "q": "我可以从新加坡以外地区申请吗？",
+        "a": "可以。Bao Service 业务覆盖新加坡、马来西亚和印度尼西亚。视角色而定，也可能进行远程或区域合作。"
       }
     }
   }

@@ -5,6 +5,9 @@ frontend:
       commands:
         - node --version
         - npm --version
+        # Make selected Amplify console env vars available to Next.js SSR/API routes.
+        # Amplify build env vars are not automatically visible to the server runtime.
+        - env | grep -e NEXT_PUBLIC_ -e LEADS_WEBHOOK_URL -e HIRING_UPDATES_URL -e WEBHOOK_DEBUG >> .env.production || true
         # npm install (not npm ci) — lockfile optional platform deps differ on Linux vs Windows
         - npm install --include=optional --no-audit --no-fund
     build:
