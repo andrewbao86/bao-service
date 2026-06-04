@@ -4,7 +4,8 @@
     "products": "产品与质量",
     "how": "交付方式",
     "faq": "常见问题",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "joinUs": "加入我们"
   },
   "cta": {
     "getStarted": "开始使用",
@@ -24,6 +25,7 @@
     "connect": "联系",
     "projectManagement": "项目管理",
     "energyEfficient": "能源效率",
+    "hiring": "加入我们",
     "privacy": "隐私政策",
     "terms": "使用条款",
     "requestQuote": "Request a Quote",
@@ -38,7 +40,9 @@
     "message": "留言",
     "submit": "发送咨询",
     "submitting": "发送中…",
+    "successTitle": "已收到咨询",
     "success": "谢谢——我们会尽快回复您。",
+    "successClose": "完成",
     "error": "发生错误。请重试或通过WhatsApp联系我们。"
   },
   "home": {
@@ -69,6 +73,9 @@
     "contactTrust1": "24小时内快速回复",
     "contactTrust2": "服务新加坡·马来西亚·印度尼西亚",
     "contactTrust3": "由认证工程师支持",
+    "hiringCtaTitle": "向 Bao Service 展示你的价值",
+    "hiringCtaSub": "我们在寻找理解我们业务方向、并能说明如何创造价值的人才——销售、工程、数据、运营或合作。",
+    "hiringCtaButton": "查看招聘页面",
     "equipment": {
       "switchgear": "开关设备",
       "transformers": "变压器",
@@ -185,5 +192,168 @@
     "privacyTitle": "隐私政策",
     "termsTitle": "使用条款",
     "lastUpdated": "Last updated: August 2025"
+  },
+  "hiring": {
+    "metaTitle": "Join Bao Service | Pitch Your Value",
+    "metaDescription": "Study our industrial electrical, energy cost reduction, and project management solutions — then pitch where you can create measurable value for Bao Service.",
+    "heroEyebrow": "Hiring · Mission Briefing",
+    "heroLine1": "Don't Apply Blind.",
+    "heroLine2": "Study the Mission.",
+    "heroLine3": "Pitch Your Value.",
+    "heroSub": "Bao Service works across industrial electrical solutions, energy cost reduction, and project management support. We are looking for people who can create value in sales, engineering, data, software, operations, content, or partnerships.",
+    "heroStudyCta": "Study Our Solutions",
+    "heroPitchCta": "Pitch Yourself",
+    "updates": {
+      "label": "Mission updates",
+      "empty": "No active updates right now — check back soon.",
+      "range": "{start}–{end} of {total}",
+      "expandHint": "Tap to read full update",
+      "position": "Update {current} of {total}"
+    },
+    "buildingQuote": "We are not looking for generic applicants.",
+    "buildingBody": "We are looking for people who understand what Bao Service is building and can clearly explain how they can help us grow, improve, sell, build, analyze, or execute better.",
+    "pillElectrical": "Industrial Electrical",
+    "pillEnergy": "Energy Intelligence",
+    "pillPm": "Project Control",
+    "studyLabel": "Study the Mission",
+    "studyTitle": "Study What We Do. Then Pitch Where You Can Help.",
+    "studySub": "Before you submit, explore our current business directions. We want people who can connect their skills to real customer problems, not just send a generic CV.",
+    "studyLeadBefore": "Generic applications are easy to ignore. Specific value is hard to ignore. Study our current solutions first. Then tell us where you can help Bao Service grow, improve, sell, build, analyze, or execute better.",
+    "studyLeadAfter": "After reviewing these pages, your pitch should answer one simple question: Where can you create measurable value for Bao Service?",
+    "formSectionTitle": "Pitch Yourself",
+    "formSectionSub": "Tell us where you can help — with proof, not generic claims.",
+    "finalCtaTitle": "Understand the mission. Pitch your value.",
+    "finalCtaSub": "We review every pitch carefully. Strong submissions connect directly to a real Bao Service business direction.",
+    "studyCards": {
+      "electrical": {
+        "index": "01 / Industrial Electrical",
+        "title": "Industrial Electrical Solutions",
+        "description": "We supply and support electrical equipment and components for industrial plants across Singapore, Malaysia, and Indonesia — including switchgear, transformers, MCCs, VFDs, power meters, protection relays, and related systems.",
+        "prompt": "Can you help us source better, sell better, support customers better, or strengthen technical delivery?",
+        "talent": "Sales · Electrical Engineering · Procurement · Supplier Network · Site Support",
+        "cta": "Study Electrical Solutions"
+      },
+      "energy": {
+        "index": "02 / Energy Intelligence",
+        "title": "Energy Cost Reduction & Data Analysis",
+        "description": "This service focuses on reducing energy cost using actual TNB bills, meter data, load profiles, demand analysis, and cost-reduction measures for Malaysian industrial and commercial facilities.",
+        "prompt": "Can you help us find customers, analyze data, build tools, explain savings, or implement practical energy-saving measures?",
+        "talent": "Energy Sales · Data Analysis · Software · Electrical Monitoring · BESS · Customer Success",
+        "cta": "Study Energy Solutions"
+      },
+      "pm": {
+        "index": "03 / Project Control",
+        "title": "Project Management Support",
+        "description": "Bao Service provides project support when teams are overloaded, key people are unavailable, responsibilities are unclear, or coordination becomes tense.",
+        "prompt": "Can you help us manage site coordination, documentation, stakeholder follow-up, project recovery, or customer communication?",
+        "talent": "Project Management · Operations · Documentation · Site Coordination · Client Communication",
+        "cta": "Study Project Support"
+      }
+    },
+    "chips": {
+      "label": "Before you pitch:",
+      "electrical": "Read Electrical Solutions",
+      "energy": "Read Energy Cost Reduction",
+      "pm": "Read Project Management",
+      "ready": "Ready to Pitch"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "studiedMostLabel": "Which Bao Service solution did you study most closely?",
+      "studiedMost": {
+        "electrical": "Industrial Electrical Solutions",
+        "energy": "Energy Cost Reduction",
+        "project-management": "Project Management Support",
+        "multiple": "More than one",
+        "not-studied": "I have not studied yet"
+      },
+      "notStudiedWarning": "Stronger pitches usually connect directly to one of our current business directions.",
+      "directionLabel": "Which Bao Service direction are you most interested in?",
+      "direction": {
+        "electrical": "Industrial Electrical Solutions",
+        "energy": "Energy Cost Reduction & Data Analysis",
+        "project-management": "Project Management Support",
+        "multiple": "Multiple areas",
+        "other": "Something else"
+      },
+      "contributionLabel": "After studying our solution pages, where do you think you can help?",
+      "contributionPlaceholder": "Example: I can help Bao Service generate leads for energy cost reduction among medium-voltage industrial customers in Johor because I already have contacts with facility managers and contractors.",
+      "valuePitchLabel": "What can you bring?",
+      "proofLabel": "What proof, experience, network, or past result supports your pitch?",
+      "first30DaysLabel": "If we worked together for 30 days, what would you try to improve, sell, build, or fix first?",
+      "first30DaysPlaceholder": "Be specific — a concrete first move, not a generic statement.",
+      "engagementLabel": "Preferred collaboration type",
+      "engagement": {
+        "full-time": "Full-time",
+        "part-time": "Part-time",
+        "freelance": "Freelance",
+        "commission": "Commission-based",
+        "internship": "Internship",
+        "partnership": "Partnership",
+        "open": "Open to discussion"
+      },
+      "cvLinkLabel": "CV link (required)",
+      "cvLinkWarning1": "Before submitting, please make sure your CV link is accessible.",
+      "cvLinkWarning2": "Google Drive links should be set to \"Anyone with the link can view\".",
+      "portfolioLinkLabel": "Portfolio link (optional)",
+      "cvAccessConfirm": "I confirm Bao Service can access the CV/portfolio link I provided.",
+      "privacyConsent": "I agree that Bao Service may review and store my submitted information for hiring, collaboration, and follow-up purposes.",
+      "privacyLink": "Privacy Policy",
+      "privacyNote": "We will only use your submission to assess possible hiring, freelance, partnership, or collaboration opportunities with Bao Service.",
+      "submit": "Submit Pitch",
+      "submitting": "Submitting…",
+      "successTitle": "Pitch received",
+      "success": "Thank you — we will review your submission and follow up if there is a potential fit.",
+      "error": "Something went wrong. Please try again or contact us on WhatsApp."
+    },
+    "timeline": {
+      "title": "What Happens Next",
+      "sub": "We treat every pitch seriously — here is how the process works.",
+      "step1": {
+        "title": "You submit",
+        "body": "Share your pitch, links, and where you believe you can create value."
+      },
+      "step2": {
+        "title": "We review",
+        "body": "Our team reads every submission and checks fit against current business needs."
+      },
+      "step3": {
+        "title": "Conversation",
+        "body": "Promising pitches lead to a short call or message exchange."
+      },
+      "step4": {
+        "title": "Next steps",
+        "body": "If there is mutual fit, we discuss collaboration — employment, freelance, or partnership."
+      }
+    },
+    "faq": {
+      "title": "Hiring FAQ",
+      "faq1": {
+        "q": "Is this a traditional job application?",
+        "a": "No. We want you to study our business directions first, then pitch specific value you can create — not send a generic CV blast."
+      },
+      "faq2": {
+        "q": "Do I need to tick all three solution chips?",
+        "a": "No — but you should understand at least one area well enough to explain where you can help."
+      },
+      "faq3": {
+        "q": "What collaboration types do you consider?",
+        "a": "Full-time, part-time, freelance, commission-based, internship, and partnership models — depending on the person and the opportunity."
+      },
+      "faq4": {
+        "q": "Why do you require an accessible CV link?",
+        "a": "Link-based submissions fail when Google Drive or portfolio permissions are restricted. Please set sharing to \"Anyone with the link can view\"."
+      },
+      "faq5": {
+        "q": "How long until I hear back?",
+        "a": "We aim to review submissions within one to two weeks. Strong, specific pitches may hear back sooner."
+      },
+      "faq6": {
+        "q": "Can I apply from outside Singapore?",
+        "a": "Yes. Bao Service operates across Singapore, Malaysia, and Indonesia. Remote and regional collaboration may be possible depending on the role."
+      }
+    }
   }
 }

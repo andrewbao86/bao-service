@@ -17,7 +17,7 @@ const bulletTranslationKeys = [
   "freeReportBullet4",
 ] as const;
 
-export function EnergyFreeReportSection() {
+export function EnergyFreeReportSection({ onRequestReport }: { onRequestReport: () => void }) {
   const t = useTranslations("energy");
   const wa = whatsappEnergyLink(WHATSAPP_MESSAGES.energyTnbReport);
 
@@ -63,7 +63,10 @@ export function EnergyFreeReportSection() {
           <section className="rounded-2xl bg-white/10 p-6 ring-1 ring-white/15 backdrop-blur-sm md:p-8">
             <p className="text-sm font-medium text-brand-100">{t("ctaFreeReport")}</p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <EnergyTnbMailCta className="w-full justify-center sm:flex-1 lg:w-full" />
+              <EnergyTnbMailCta
+                className="w-full justify-center sm:flex-1 lg:w-full"
+                onClick={onRequestReport}
+              />
               <a href={wa} target="_blank" rel="noopener noreferrer" className="sm:flex-1 lg:w-full">
                 <Button size="lg" variant="whatsapp" className="w-full">
                   <MessageCircle className="h-4 w-4" aria-hidden />

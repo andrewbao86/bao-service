@@ -1,17 +1,19 @@
 "use client";
 
+import { Suspense, useState } from "react";
 import { useTranslations } from "next-intl";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
+import { GetStartedModal } from "@/components/shared/GetStartedModal";
 import { WhatsAppFab } from "@/components/motion/WhatsAppFab";
 import { whatsappEnergyLink, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 import { EnergyLanding } from "./EnergyLanding";
-import { useTnbAnalysisMailto } from "./EnergyTnbMailCta";
 import type { Locale } from "@/i18n/routing";
 
 export function EnergyPage({ locale }: { locale: Locale }) {
   const t = useTranslations("energy");
-  const tnbMailto = useTnbAnalysisMailto();
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModal = () => setModalOpen(true);
   const energyWhatsApp = whatsappEnergyLink(WHATSAPP_MESSAGES.energyTnbReport);
 
   return (
@@ -19,17 +21,25 @@ export function EnergyPage({ locale }: { locale: Locale }) {
       <SiteHeader
         locale={locale}
         linkToHome
-        getStartedHref={tnbMailto}
+        onGetStarted={openModal}
         getStartedLabel={t("ctaFreeReport")}
         whatsappHref={energyWhatsApp}
       />
       <div className="pt-16 min-h-screen bg-gradient-to-b from-white to-section-alt">
-        <EnergyLanding />
+        <EnergyLanding onRequestReport={openModal} />
         <OrganizationJsonLd />
         <BreadcrumbJsonLd locale={locale} />
       </div>
       <WhatsAppFab href={energyWhatsApp} />
       <Footer locale={locale} />
+      <Suspense fallback={null}>
+        <GetStartedModal
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          locale={locale}
+          need="energy-tnb-report"
+        />
+      </Suspense>
     </main>
   );
 }

@@ -21,10 +21,10 @@ const EnergyDemoSection = dynamic(
   { loading: () => <EnergyDemoSectionFallback /> }
 );
 
-export function EnergyLanding() {
+export function EnergyLanding({ onRequestReport }: { onRequestReport: () => void }) {
   return (
     <div className="pb-8">
-      <EnergyServiceHero />
+      <EnergyServiceHero onRequestReport={onRequestReport} />
       <EnergyTariffCallout />
       <ScrollReveal>
         <EnergyProcessSection />
@@ -36,7 +36,7 @@ export function EnergyLanding() {
         <EnergyDemoSection />
       </ScrollReveal>
       <ScrollReveal>
-        <EnergyFreeReportSection />
+        <EnergyFreeReportSection onRequestReport={onRequestReport} />
       </ScrollReveal>
     </div>
   );

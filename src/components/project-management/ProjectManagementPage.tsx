@@ -27,7 +27,12 @@ export function ProjectManagementPage({ locale }: { locale: Locale }) {
       <WhatsAppFab />
       <Footer locale={locale} />
       <Suspense fallback={null}>
-        <GetStartedModal open={modalOpen} onClose={() => setModalOpen(false)} locale={locale} />
+        <GetStartedModal
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          locale={locale}
+          need="project-management"
+        />
       </Suspense>
     </main>
   );

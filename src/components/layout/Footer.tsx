@@ -61,6 +61,11 @@ export function Footer({ locale }: { locale: Locale }) {
                 </Link>
               </li>
               <li>
+                <Link href={`/${locale}/hiring`} className="text-slate-300 hover:text-white">
+                  {t("hiring")}
+                </Link>
+              </li>
+              <li>
                 <Link href={`/${locale}/privacy`} className="text-slate-300 hover:text-white">
                   {t("privacy")}
                 </Link>

@@ -1,30 +1,20 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { buttonVariants, type ButtonProps } from "@/components/ui/button";
-import { buildTnbAnalysisMailtoLink } from "@/lib/energy/tnbAnalysisMailto";
-import { cn } from "@/lib/utils";
+import { Button, type ButtonProps } from "@/components/ui/button";
 
 type EnergyTnbMailCtaProps = {
   size?: NonNullable<ButtonProps["size"]>;
   className?: string;
+  onClick: () => void;
 };
 
-export function useTnbAnalysisMailto() {
+export function EnergyTnbMailCta({ size = "lg", className, onClick }: EnergyTnbMailCtaProps) {
   const t = useTranslations("energy");
-  return buildTnbAnalysisMailtoLink(t("tnbMailSubject"), t("tnbMailBody"));
-}
-
-export function EnergyTnbMailCta({ size = "lg", className }: EnergyTnbMailCtaProps) {
-  const t = useTranslations("energy");
-  const href = useTnbAnalysisMailto();
 
   return (
-    <a
-      href={href}
-      className={cn(buttonVariants({ variant: "default", size }), className)}
-    >
+    <Button type="button" size={size} className={className} onClick={onClick}>
       {t("ctaFreeReport")}
-    </a>
+    </Button>
   );
 }

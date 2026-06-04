@@ -69,3 +69,114 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hiring-orb-drift {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(12px, -8px);
+    }
+  }
+
+  @keyframes hiring-scan-line {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  .hiring-orb-drift {
+    animation: hiring-orb-drift 14s ease-in-out infinite;
+  }
+
+  .hiring-orb-drift-reverse {
+    animation: hiring-orb-drift 18s ease-in-out infinite reverse;
+  }
+
+  .hiring-scan-line {
+    animation: hiring-scan-line 4s linear infinite;
+  }
+
+  @keyframes hiring-updates-exit-up {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-0.5rem);
+      opacity: 0;
+    }
+  }
+
+  @keyframes hiring-updates-enter {
+    from {
+      transform: translateY(0.75rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .hiring-updates-exit-up {
+    animation: hiring-updates-exit-up 0.25s ease-in forwards;
+  }
+
+  .hiring-updates-enter {
+    animation: hiring-updates-enter 0.3s ease-out forwards;
+  }
+
+  @keyframes hiring-updates-progress-fill {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .hiring-updates-progress {
+    width: 0%;
+    animation: hiring-updates-progress-fill 4s linear forwards;
+  }
+
+  .hiring-updates-progress-paused {
+    animation-play-state: paused;
+  }
+
+  .hiring-updates-list-fade {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
+.ready-pitch-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  background-color: rgb(19 78 74 / 0.8);
+  color: rgb(153 246 228);
+  box-shadow: 0 0 0 1px rgb(20 184 166 / 0.4);
+}
+
+@media (min-width: 768px) {
+  @media (prefers-reduced-motion: no-preference) {
+    .ready-pitch-chip {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  }
+}

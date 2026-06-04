@@ -7,7 +7,7 @@ import { EnergyTariffBadge } from "./EnergyTariffCallout";
 import { EnergyPortalCta } from "./EnergyPortalCta";
 import { EnergyTnbMailCta } from "./EnergyTnbMailCta";
 
-export function EnergyServiceHero() {
+export function EnergyServiceHero({ onRequestReport }: { onRequestReport: () => void }) {
   const t = useTranslations("energy");
 
   return (
@@ -17,7 +17,7 @@ export function EnergyServiceHero() {
       <p className={`mt-5 text-base md:text-lg leading-relaxed ${text.onDarkMuted}`}>{t("heroSub")}</p>
       <p className={`mt-3 text-sm ${text.onDarkMuted}`}>{t("heroAudience")}</p>
       <div className="mt-8 flex flex-row flex-wrap items-center gap-3">
-        <EnergyTnbMailCta className="shrink-0" />
+        <EnergyTnbMailCta className="shrink-0" onClick={onRequestReport} />
         <EnergyPortalCta className="shrink-0" />
       </div>
     </BrandHero>

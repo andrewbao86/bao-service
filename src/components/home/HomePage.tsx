@@ -16,6 +16,7 @@ import { PartnersSection } from "@/components/home/PartnersSection";
 import { HowWeDeliverIntro, HowWeDeliverSection } from "@/components/home/HowWeDeliverSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ContactSection } from "@/components/home/ContactSection";
+import { HiringCtaStrip } from "@/components/home/HiringCtaStrip";
 import type { Locale } from "@/i18n/routing";
 
 export function HomePage({ locale }: { locale: Locale }) {
@@ -42,6 +43,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <ScrollReveal>
           <FaqSection />
         </ScrollReveal>
+        <HiringCtaStrip />
         <ScrollReveal variant="subtle">
           <ContactSection onGetStarted={openModal} />
         </ScrollReveal>

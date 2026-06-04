@@ -44,12 +44,14 @@ export function SiteHeader({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const primaryCtaLabel = getStartedLabel ?? tCta("getStarted");
+
   const navItems = [
     { href: `${prefix}#services-projects`, label: t("whatWeDo") },
-    { href: `${prefix}#products`, label: t("products") },
     { href: `${prefix}#how-we-deliver`, label: t("how") },
     { href: `${prefix}#faq`, label: t("faq") },
     { href: `${prefix}#contact`, label: t("contact") },
+    { href: `/${locale}/hiring`, label: t("joinUs"), isPage: true },
   ];
 
   return (
@@ -65,15 +67,19 @@ export function SiteHeader({
 
         <nav className="hidden lg:flex items-center justify-center flex-1 mx-8">
           <div className="flex items-center justify-between w-full max-w-2xl">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="px-3 py-2 text-sm text-slate-700 hover:text-brand-600 transition-colors whitespace-nowrap"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              "isPage" in item && item.isPage ? (
+                <JoinUsLink key={item.href} href={item.href} label={item.label} />
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="px-3 py-2 text-sm text-slate-700 hover:text-brand-600 transition-colors whitespace-nowrap"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
           </div>
         </nav>
 
@@ -88,7 +94,7 @@ export function SiteHeader({
             </a>
           ) : (
             <Button onClick={onGetStarted} className="whitespace-nowrap">
-              {tCta("getStarted")}
+              {primaryCtaLabel}
             </Button>
           )}
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
@@ -120,16 +126,26 @@ export function SiteHeader({
             className="lg:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur overflow-hidden"
           >
             <nav className="px-4 sm:px-6 py-4 space-y-3">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block py-3 px-4 rounded-lg hover:bg-slate-50 text-slate-700 hover:text-brand-600 font-medium"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) =>
+                "isPage" in item && item.isPage ? (
+                  <JoinUsLink
+                    key={item.href}
+                    href={item.href}
+                    label={item.label}
+                    onClick={() => setMobileOpen(false)}
+                    className="w-full py-3"
+                  />
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-3 px-4 rounded-lg hover:bg-slate-50 text-slate-700 hover:text-brand-600 font-medium"
+                  >
+                    {item.label}
+                  </a>
+                )
+              )}
               <MobileCtas
                 onGetStarted={
                   onGetStarted
@@ -150,6 +166,32 @@ export function SiteHeader({
         )}
       </AnimatePresence>
     </header>
+  );
+}
+
+function JoinUsLink({
+  href,
+  label,
+  onClick,
+  className,
+}: {
+  href: string;
+  label: string;
+  onClick?: () => void;
+  className?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={cn(
+        "ready-pitch-chip justify-center whitespace-nowrap",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/60 focus-visible:ring-offset-2",
+        className
+      )}
+    >
+      {label}
+    </Link>
   );
 }
 
