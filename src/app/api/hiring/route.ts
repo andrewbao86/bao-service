@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { buildHiringWebhookPayload, parseHiringPayload, verifyTurnstileToken } from "@/lib/hiring";
 import { getClientIp, isRateLimited, recordRateLimitHit } from "@/lib/rate-limit";
-import { forwardToWebhook } from "@/lib/webhook";
+import { isWebhookDebugEnabled, submitViaWebhook } from "@/lib/webhook";
+import { webhookFailureResponse, webhookSuccessResponse } from "@/lib/webhook-response";
 
 export const runtime = "nodejs";
 
@@ -50,22 +51,22 @@ export async function POST(request: Request) {
 
   const webhookPayload = buildHiringWebhookPayload(payload);
   const webhook = process.env.LEADS_WEBHOOK_URL;
+  const result = await submitViaWebhook("hiring", webhook, webhookPayload);
 
-  try {
-    if (webhook) {
-      const res = await forwardToWebhook(webhook, webhookPayload);
-      if (!res.ok) throw new Error("webhook failed");
-    } else if (process.env.NODE_ENV === "development") {
-      console.info("[hiring]", JSON.stringify(webhookPayload));
+  if (!result.success) {
+    if (!webhook?.trim() && !isWebhookDebugEnabled()) {
+      if (process.env.NODE_ENV === "development") {
+        console.info("[hiring] no webhook — dev-only accept", JSON.stringify(webhookPayload));
+        recordRateLimitHit(rateKey);
+        return NextResponse.json({ ok: true });
+      }
+      console.error("[hiring] LEADS_WEBHOOK_URL missing in production — row not saved");
     }
-    recordRateLimitHit(rateKey);
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    if (process.env.NODE_ENV === "development") {
-      console.error("[hiring] webhook error", err);
-    }
-    return NextResponse.json({ error: "Failed to submit" }, { status: 502 });
+    return webhookFailureResponse("hiring", result);
   }
+
+  recordRateLimitHit(rateKey);
+  return webhookSuccessResponse(result);
 }
 
 export function GET() {

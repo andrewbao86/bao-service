@@ -106,9 +106,27 @@ In **Amplify console → Hosting → Environment variables** (branch `main`):
 |----------|--------|
 | `LEADS_WEBHOOK_URL` | Your Apps Script `/exec` URL |
 
-Save and **redeploy**. Without this variable, production accepts submissions but does not store them anywhere.
+Save and **redeploy**. Without `LEADS_WEBHOOK_URL` at **runtime**, production returns **502** (forms show an error) and logs `[leads] LEADS_WEBHOOK_URL missing in production` to CloudWatch.
 
 Local dev: set `LEADS_WEBHOOK_URL` in `.env.example` and run `npm run dev`.
+
+### Debugging webhook failures on Amplify
+
+1. Set **`WEBHOOK_DEBUG=true`** in Amplify environment variables and redeploy.
+2. Submit a form and inspect the Network tab response on `POST /api/leads` or `POST /api/hiring`. The JSON includes a **`debug`** object:
+
+| `debug.stage` | Meaning |
+|---------------|---------|
+| `skipped` | `LEADS_WEBHOOK_URL` not set in the running SSR function |
+| `fetch_error` | Network/timeout calling Google (check URL, 10s timeout) |
+| `http_error` | Apps Script returned non-2xx HTTP |
+| `non_json` | Response was not JSON (often wrong deploy access or login HTML) |
+| `app_error` | Apps Script returned `{"ok":false,"error":"..."}` — fix sheet/script |
+| `ok` | Forwarded successfully; check `debug.routed` (`leads` or `hiring`) |
+
+3. **Amplify → Monitoring → Logging** (CloudWatch): search for `[webhook:leads]` or `[webhook:hiring]` — one JSON line per attempt with the same fields (no PII).
+
+Remove `WEBHOOK_DEBUG` after fixing the issue.
 
 ## Hiring hero updates (Google Sheet carousel)
 
