@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Check, MessageCircle } from "lucide-react";
+import { Check, MessageCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { energyImages } from "@/lib/content/energyMedia";
 import { heroGradient } from "@/lib/ui-classes";
@@ -15,6 +15,7 @@ const bulletTranslationKeys = [
   "freeReportBullet2",
   "freeReportBullet3",
   "freeReportBullet4",
+  "freeReportBullet5",
 ] as const;
 
 export function EnergyFreeReportSection({ onRequestReport }: { onRequestReport: () => void }) {
@@ -44,6 +45,10 @@ export function EnergyFreeReportSection({ onRequestReport }: { onRequestReport: 
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">
               {t("freeReportSub")}
+            </p>
+            <p className="mt-4 flex max-w-xl items-start gap-2.5 text-sm leading-relaxed text-teal-100/90">
+              <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-teal-300" aria-hidden />
+              <span>{t("freeReportAiNote")}</span>
             </p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {bulletTranslationKeys.map((key) => (

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { section, text } from "@/lib/ui-classes";
 import { cn } from "@/lib/utils";
+import { EnergyAiCallout } from "./EnergyAiCallout";
 
 const steps: {
   num: string;
@@ -181,6 +182,16 @@ export function EnergyProcessSection() {
               className="w-full"
             />
           </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="mt-10 max-w-3xl"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={fadeUp}
+        >
+          <EnergyAiCallout variant="brand">{t("processAiNote")}</EnergyAiCallout>
         </motion.div>
       </div>
     </section>

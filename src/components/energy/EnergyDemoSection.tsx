@@ -23,6 +23,7 @@ import {
 } from "@/lib/energy/mockData";
 import { section, text } from "@/lib/ui-classes";
 import { cn } from "@/lib/utils";
+import { EnergyAiCallout } from "./EnergyAiCallout";
 
 type Tab = "overview" | "peak" | "energy";
 
@@ -77,8 +78,12 @@ export function EnergyDemoSection() {
   return (
     <section className={cn("py-20 md:py-28", section.default)}>
       <div className="mx-auto max-w-7xl px-4">
-        <p className={cn("text-sm md:text-base max-w-3xl", text.body)}>{t("demoIntro")}</p>
-        <div className="mt-6">
+        <h2 className={cn("text-2xl font-semibold tracking-tight md:text-3xl", text.heading)}>
+          {t("demoTitle")}
+        </h2>
+        <p className={cn("mt-3 max-w-3xl text-sm md:text-base", text.body)}>{t("demoIntro")}</p>
+        <p className={cn("mt-2 max-w-3xl text-sm text-teal-700", text.body)}>{t("demoAiNote")}</p>
+        <div className="mt-8">
           <DemoMeterSimulator key={plant.id} plant={plant}>
             {({ reading, powerHistory }) => {
               const powerSeries: ChartPoint[] = powerHistory.map((r, i) => ({
@@ -180,6 +185,11 @@ function DemoPanel({
       />
 
       <div className={cn("p-4 sm:p-6 lg:p-8", dash.body)}>
+        <EnergyAiCallout variant="dark" className="mb-6">
+          <p className="font-medium text-teal-200">{t("demoAiBannerTitle")}</p>
+          <p className="mt-1 text-slate-300">{t("demoAiBannerText")}</p>
+        </EnergyAiCallout>
+
         <div className={cn("mb-6 flex gap-2 rounded-lg p-1", dash.tabBar)}>
         {tabs.map(({ id, label }) => (
           <button
@@ -210,7 +220,7 @@ function DemoPanel({
             <h3 className="mb-3 text-sm text-slate-400">Power Consumption 15m Average</h3>
             <EnergyChart data={powerSeries} unit="kW" variant="portal" />
           </div>
-          <OptimizationCards plant={plant} />
+          <OptimizationCards plant={plant} t={t} />
         </div>
       )}
 
@@ -282,7 +292,13 @@ function Kpi({ label, value }: { label: string; value: string }) {
   );
 }
 
-function OptimizationCards({ plant }: { plant: PlantMock }) {
+function OptimizationCards({
+  plant,
+  t,
+}: {
+  plant: PlantMock;
+  t: ReturnType<typeof useTranslations<"energy">>;
+}) {
   const peakCost = Math.round(plant.currentPower * 170);
   const offPeakCost = Math.round(plant.offPeakPower * 120);
   const totalBefore = peakCost + offPeakCost + 12000;
@@ -291,39 +307,46 @@ function OptimizationCards({ plant }: { plant: PlantMock }) {
   return (
     <div className="grid md:grid-cols-2 gap-4">
       <OptCard
-        title="Before Optimization"
+        title={t("demoOptBefore")}
         peak={`${plant.currentPower} kW`}
         offPeak={`${plant.offPeakPower} kW`}
         total={formatRinggitPerMonth(totalBefore)}
         variant="before"
+        peakLabel={t("demoOptPeak")}
+        offPeakLabel={t("demoOptOffPeak")}
+        totalLabel={t("demoOptTotal")}
       />
       <OptCard
-        title="After Optimization"
+        title={t("demoOptAfter")}
         peak={`${Math.round(plant.currentPower * 0.85)} kW`}
         offPeak={`${Math.round(plant.offPeakPower * 0.85)} kW`}
         total={formatRinggitPerMonth(totalAfter)}
         variant="after"
+        peakLabel={t("demoOptPeak")}
+        offPeakLabel={t("demoOptOffPeak")}
+        totalLabel={t("demoOptTotal")}
       />
       <div className="md:col-span-2 grid grid-cols-3 gap-4 text-center">
         <div className="bg-success-soft rounded-lg p-4 ring-1 ring-inset ring-success/25">
           <div className="text-2xl font-bold text-success">15%</div>
-          <div className="text-xs text-slate-400 mt-1">Cost Reduction</div>
+          <div className="text-xs text-slate-400 mt-1">{t("demoOptCostReduction")}</div>
         </div>
-        <MonthlySavingsCard amount={totalBefore - totalAfter} />
+        <MonthlySavingsCard amount={totalBefore - totalAfter} label={t("demoOptMonthlySavings")} />
         <div className={cn("rounded-lg p-4", dash.cardMuted)}>
           <div className="text-2xl font-bold">{formatRinggit((totalBefore - totalAfter) * 12)}</div>
-          <div className="text-xs text-slate-400 mt-1">Annual Savings</div>
+          <div className="text-xs text-slate-400 mt-1">{t("demoOptAnnualSavings")}</div>
         </div>
       </div>
+      <p className="md:col-span-2 text-center text-xs text-slate-500">{t("demoOptAiFootnote")}</p>
     </div>
   );
 }
 
-function MonthlySavingsCard({ amount }: { amount: number }) {
+function MonthlySavingsCard({ amount, label }: { amount: number; label: string }) {
   return (
     <div className={cn("rounded-lg p-4", dash.cardMuted)}>
       <div className="text-2xl font-bold">{formatRinggit(amount)}</div>
-      <div className="text-xs text-slate-400 mt-1">Monthly Savings</div>
+      <div className="text-xs text-slate-400 mt-1">{label}</div>
     </div>
   );
 }
@@ -334,12 +357,18 @@ function OptCard({
   offPeak,
   total,
   variant,
+  peakLabel,
+  offPeakLabel,
+  totalLabel,
 }: {
   title: string;
   peak: string;
   offPeak: string;
   total: string;
   variant: "before" | "after";
+  peakLabel: string;
+  offPeakLabel: string;
+  totalLabel: string;
 }) {
   return (
     <div
@@ -350,15 +379,15 @@ function OptCard({
       <h4 className="font-medium mb-3">{title}</h4>
       <div className="space-y-2 text-sm">
         <div className="flex justify-between">
-          <span className="text-slate-400">Peak Period</span>
+          <span className="text-slate-400">{peakLabel}</span>
           <span>{peak}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-slate-400">Off-Peak</span>
+          <span className="text-slate-400">{offPeakLabel}</span>
           <span>{offPeak}</span>
         </div>
         <div className="flex justify-between font-medium pt-2 border-t border-white/10">
-          <span className="text-slate-400">Total Energy Cost</span>
+          <span className="text-slate-400">{totalLabel}</span>
           <span>{total}</span>
         </div>
       </div>

@@ -6,7 +6,6 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFab } from "@/components/motion/WhatsAppFab";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import type { HiringUpdate } from "@/lib/hiring/updates";
 import type { Locale } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { HiringHero } from "./HiringHero";
@@ -47,14 +46,13 @@ const HiringFinalCta = dynamic(
 
 type HiringPageProps = {
   locale: Locale;
-  initialUpdates: HiringUpdate[];
 };
 
 function scrollToSection(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
-export function HiringPage({ locale, initialUpdates }: HiringPageProps) {
+export function HiringPage({ locale }: HiringPageProps) {
   const t = useTranslations("hiring");
 
   const scrollToStudy = useCallback(() => scrollToSection("study-solutions"), []);
@@ -64,11 +62,7 @@ export function HiringPage({ locale, initialUpdates }: HiringPageProps) {
     <main className="min-h-screen">
       <SiteHeader locale={locale} linkToHome getStartedLabel={t("heroPitchCta")} onGetStarted={scrollToPitch} />
       <div className="pt-16">
-        <HiringHero
-          onStudyClick={scrollToStudy}
-          onPitchClick={scrollToPitch}
-          updates={initialUpdates}
-        />
+        <HiringHero onStudyClick={scrollToStudy} onPitchClick={scrollToPitch} />
         <HiringBuildingSection />
         <HiringStudySection locale={locale} />
 

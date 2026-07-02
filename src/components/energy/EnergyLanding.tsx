@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { EnergyAiInsightsSection } from "./EnergyAiInsightsSection";
 import { EnergyEvidenceSection } from "./EnergyEvidenceSection";
 import { EnergyFreeReportSection } from "./EnergyFreeReportSection";
 import { EnergyProcessSection } from "./EnergyProcessSection";
@@ -31,6 +32,9 @@ export function EnergyLanding({ onRequestReport }: { onRequestReport: () => void
       </ScrollReveal>
       <ScrollReveal>
         <EnergyEvidenceSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <EnergyAiInsightsSection onRequestReport={onRequestReport} />
       </ScrollReveal>
       <ScrollReveal>
         <EnergyDemoSection />

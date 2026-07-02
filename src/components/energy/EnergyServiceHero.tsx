@@ -1,5 +1,6 @@
 "use client";
 
+import { Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { BrandHero } from "@/components/motion/BrandHero";
 import { text } from "@/lib/ui-classes";
@@ -15,6 +16,10 @@ export function EnergyServiceHero({ onRequestReport }: { onRequestReport: () => 
       <EnergyTariffBadge className="mb-4" onDark />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">{t("heroTitle")}</h1>
       <p className={`mt-5 text-base md:text-lg leading-relaxed ${text.onDarkMuted}`}>{t("heroSub")}</p>
+      <p className={`mt-4 flex items-start gap-2.5 text-sm leading-relaxed ${text.onDarkMuted}`}>
+        <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-teal-300" aria-hidden />
+        <span>{t("heroAiNote")}</span>
+      </p>
       <p className={`mt-3 text-sm ${text.onDarkMuted}`}>{t("heroAudience")}</p>
       <div className="mt-8 flex flex-row flex-wrap items-center gap-3">
         <EnergyTnbMailCta className="shrink-0" onClick={onRequestReport} />

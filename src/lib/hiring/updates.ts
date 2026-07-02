@@ -4,7 +4,7 @@ export type HiringUpdate = {
 
 const MAX_ITEMS = 20;
 const MAX_TEXT_LENGTH = 280;
-const FETCH_TIMEOUT_MS = 8_000;
+const FETCH_TIMEOUT_MS = 3_000;
 const REVALIDATE_SECONDS = 60;
 
 type UpdatesFeedResponse = {

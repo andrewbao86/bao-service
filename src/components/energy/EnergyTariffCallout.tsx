@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { energyImages } from "@/lib/content/energyMedia";
 import { section, surface, text } from "@/lib/ui-classes";
 import { cn } from "@/lib/utils";
+import { EnergyAiCallout } from "./EnergyAiCallout";
 import { EnergyImageFrame } from "./EnergyImageFrame";
 
 export function EnergyTariffBadge({
@@ -46,6 +47,9 @@ export function EnergyTariffCallout() {
                 {t("tariffEligibilityBody")}
               </p>
               <p className={cn("mt-3 text-sm font-medium text-brand-700")}>{t("tariffCategoryName")}</p>
+              <EnergyAiCallout variant="brand" className="mt-5">
+                {t("tariffAiNote")}
+              </EnergyAiCallout>
             </div>
             <EnergyImageFrame
               src={energyImages.malaysiaMarket}

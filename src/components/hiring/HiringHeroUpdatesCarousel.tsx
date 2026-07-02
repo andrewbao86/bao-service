@@ -185,7 +185,7 @@ export function HiringHeroUpdatesCarousel({ items, className }: HiringHeroUpdate
         {shouldRotate && !reduced ? (
           <div className="mt-2 h-px overflow-hidden bg-teal-500/20" aria-hidden>
             <div
-              key={safeIndex}
+              key={`progress-${safeIndex}`}
               className={cn(
                 "h-full bg-teal-400/70 hiring-updates-progress",
                 paused && "hiring-updates-progress-paused"
@@ -209,9 +209,9 @@ export function HiringHeroUpdatesCarousel({ items, className }: HiringHeroUpdate
               {t("position", { current: safeIndex + 1, total: count })}
             </span>
           ) : null}
-          <ul key={safeIndex} className={cn("space-y-1.5", listAnimationClass)}>
+          <ul key={`list-${safeIndex}`} className={cn("space-y-1.5", listAnimationClass)}>
             {visibleItems.map((item, i) => {
-              const lineKey = `${safeIndex}-${i}-${item.text.slice(0, 16)}`;
+              const lineKey = `update-${safeIndex}-${i}`;
               return (
                 <HiringUpdateLine
                   key={lineKey}

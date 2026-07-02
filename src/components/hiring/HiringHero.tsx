@@ -4,18 +4,16 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import type { HiringUpdate } from "@/lib/hiring/updates";
 import { usePrefersReducedMotion } from "@/lib/hooks/usePrefersReducedMotion";
-import { HiringHeroUpdatesCarousel } from "./HiringHeroUpdatesCarousel";
+import { HiringHeroUpdates } from "./HiringHeroUpdates";
 import { HiringMissionBackground } from "./HiringMissionBackground";
 
 type HiringHeroProps = {
   onStudyClick: () => void;
   onPitchClick: () => void;
-  updates: HiringUpdate[];
 };
 
-export function HiringHero({ onStudyClick, onPitchClick, updates }: HiringHeroProps) {
+export function HiringHero({ onStudyClick, onPitchClick }: HiringHeroProps) {
   const t = useTranslations("hiring");
   const reduced = usePrefersReducedMotion();
 
@@ -47,8 +45,8 @@ export function HiringHero({ onStudyClick, onPitchClick, updates }: HiringHeroPr
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
             {t("heroSub")}
           </p>
-          <div className="mt-6 max-w-xs lg:hidden">
-            <HiringHeroUpdatesCarousel items={updates} />
+          <div className="mt-6 max-w-xs lg:absolute lg:right-4 lg:top-1/2 lg:z-20 lg:mt-0 lg:w-56 lg:-translate-y-1/2 sm:right-6 xl:right-8 xl:w-60">
+            <HiringHeroUpdates className="w-full" />
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button size="lg" onClick={onStudyClick}>
@@ -71,12 +69,6 @@ export function HiringHero({ onStudyClick, onPitchClick, updates }: HiringHeroPr
           >
             <ChevronDown className="h-5 w-5 animate-bounce max-md:animate-none" />
           </button>
-        </div>
-
-        <div className="pointer-events-none absolute right-4 top-1/2 z-20 hidden w-[11.5rem] -translate-y-1/2 sm:right-6 sm:w-56 lg:block xl:right-8 xl:w-60">
-          <div className="pointer-events-auto">
-            <HiringHeroUpdatesCarousel items={updates} className="w-full" />
-          </div>
         </div>
       </div>
     </section>

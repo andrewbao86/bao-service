@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HiringPage } from "@/components/hiring/HiringPage";
-import { fetchHiringUpdates } from "@/lib/hiring/updates";
 import { SITE_URL } from "@/lib/constants";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -25,6 +24,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HiringRoute({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const initialUpdates = await fetchHiringUpdates();
-  return <HiringPage locale={locale as Locale} initialUpdates={initialUpdates} />;
+  return <HiringPage locale={locale as Locale} />;
 }

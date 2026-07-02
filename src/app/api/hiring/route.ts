@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { buildHiringWebhookPayload, parseHiringPayload, verifyTurnstileToken } from "@/lib/hiring";
 import { getClientIp, isRateLimited, recordRateLimitHit } from "@/lib/rate-limit";
 import { isWebhookDebugEnabled, submitViaWebhook } from "@/lib/webhook";
@@ -51,10 +51,10 @@ export async function POST(request: Request) {
 
   const webhookPayload = buildHiringWebhookPayload(payload);
   const webhook = process.env.LEADS_WEBHOOK_URL;
-  const result = await submitViaWebhook("hiring", webhook, webhookPayload);
+  const webhookConfigured = Boolean(webhook?.trim());
 
-  if (!result.success) {
-    if (!webhook?.trim() && !isWebhookDebugEnabled()) {
+  if (!webhookConfigured) {
+    if (!isWebhookDebugEnabled()) {
       if (process.env.NODE_ENV === "development") {
         console.info("[hiring] no webhook — dev-only accept", JSON.stringify(webhookPayload));
         recordRateLimitHit(rateKey);
@@ -62,11 +62,25 @@ export async function POST(request: Request) {
       }
       console.error("[hiring] LEADS_WEBHOOK_URL missing in production — row not saved");
     }
-    return webhookFailureResponse("hiring", result);
+
+    const result = await submitViaWebhook("hiring", webhook, webhookPayload);
+    if (!result.success) {
+      return webhookFailureResponse("hiring", result);
+    }
+
+    recordRateLimitHit(rateKey);
+    return webhookSuccessResponse(result);
   }
 
   recordRateLimitHit(rateKey);
-  return webhookSuccessResponse(result);
+  after(async () => {
+    const result = await submitViaWebhook("hiring", webhook, webhookPayload);
+    if (!result.success) {
+      console.error("[hiring] background webhook failed", JSON.stringify(result.debug));
+    }
+  });
+
+  return NextResponse.json({ ok: true });
 }
 
 export function GET() {

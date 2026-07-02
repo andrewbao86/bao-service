@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { parseLeadPayload } from "@/lib/leads";
 import { isWebhookDebugEnabled, submitViaWebhook } from "@/lib/webhook";
 import { webhookFailureResponse, webhookSuccessResponse } from "@/lib/webhook-response";
@@ -30,20 +30,33 @@ export async function POST(request: Request) {
   }
 
   const webhook = process.env.LEADS_WEBHOOK_URL;
-  const result = await submitViaWebhook("leads", webhook, payload);
+  const webhookConfigured = Boolean(webhook?.trim());
 
-  if (!result.success) {
-    if (!webhook?.trim() && !isWebhookDebugEnabled()) {
+  if (!webhookConfigured) {
+    if (!isWebhookDebugEnabled()) {
       if (process.env.NODE_ENV === "development") {
         console.info("[leads] no webhook — dev-only accept", JSON.stringify(payload));
         return NextResponse.json({ ok: true });
       }
       console.error("[leads] LEADS_WEBHOOK_URL missing in production — row not saved");
     }
-    return webhookFailureResponse("leads", result);
+
+    const result = await submitViaWebhook("leads", webhook, payload);
+    if (!result.success) {
+      return webhookFailureResponse("leads", result);
+    }
+
+    return webhookSuccessResponse(result);
   }
 
-  return webhookSuccessResponse(result);
+  after(async () => {
+    const result = await submitViaWebhook("leads", webhook, payload);
+    if (!result.success) {
+      console.error("[leads] background webhook failed", JSON.stringify(result.debug));
+    }
+  });
+
+  return NextResponse.json({ ok: true });
 }
 
 export function GET() {
